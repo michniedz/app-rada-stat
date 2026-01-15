@@ -1,0 +1,151 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: 'Inter', sans-serif;
+}
+
+.login-box {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-header h2 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 1.8rem;
+}
+
+.login-header .pro {
+    color: #3498db;
+    font-weight: 800;
+}
+
+.login-header p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #34495e;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1.5px solid #dcdde1;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.error-message {
+    background-color: #fce4e4;
+    color: #e74c3c;
+    padding: 0.7rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border: 1px solid #f9c2c2;
+}
+
+.login-button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #2980b9;
+}
+
+.login-button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+.login-footer {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.login-footer p {
+    font-size: 0.75rem;
+    color: #bdc3c7;
+}
+
+.tutor-info {
+    text-align: center;
+}
+
+.status-badge {
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.tutor-yes {
+    background-color: #e3f2fd;
+    border: 1px solid #2196f3;
+    color: #0d47a1;
+}
+
+.tutor-no {
+    background-color: #f5f5f5;
+    border: 1px solid #9e9e9e;
+    color: #616161;
+}
+
+.status-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.class-name {
+    font-size: 1.4rem;
+}
+
+.login-button.secondary {
+    background-color: #607d8b;
+    margin-top: 10px;
+}
+
+.login-button.secondary:hover {
+    background-color: #455a64;
+}
