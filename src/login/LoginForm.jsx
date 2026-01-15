@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './LoginForm.css';
+import Dashboard from "../components/Dashboard.jsx";
 
 const LoginForm = () => {
     const [login, setLogin] = useState('');
@@ -27,6 +28,12 @@ const LoginForm = () => {
 
             const data = await response.json();
 
+            if (data.success) {
+                setUserData(data.user);
+            } else {
+                setError(data.message || 'Błędny login lub hasło.');
+            }
+
             if (response.ok) {
                 setUserData(data.user); // Zapisujemy dane o nauczycielu
             } else {
@@ -41,28 +48,7 @@ const LoginForm = () => {
 
     // Widok po zalogowaniu
     if (userData) {
-        return (
-            <div className="login-container">
-                <div className="login-box tutor-info">
-                    <h2>Witaj, {userData.name} {userData.surname}!</h2>
-                    <hr />
-                    <div className="status-badge">
-                        {userData.isTutor ? (
-                            <div className="tutor-yes">
-                                <p className="status-title">Status: Wychowawca</p>
-                                <p className="class-name">Klasa: <strong>{userData.tutorClass}</strong></p>
-                            </div>
-                        ) : (
-                            <div className="tutor-no">
-                                <p className="status-title">Status: Nauczyciel</p>
-                                <p>Nie jesteś przypisany jako wychowawca do żadnej klasy.</p>
-                            </div>
-                        )}
-                    </div>
-                    <button onClick={() => setUserData(null)} className="login-button secondary">Wyloguj</button>
-                </div>
-            </div>
-        );
+        return <Dashboard user={userData} onLogout={() => setUserData(null)} />;
     }
 
     return (

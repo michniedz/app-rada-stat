@@ -1,0 +1,66 @@
+.dashboard-container {
+    min-height: 100vh;
+    background-color: #f4f7f9;
+    color: #2c3e50;
+}
+
+.dashboard-nav {
+    background: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.nav-left { display: flex; align-items: center; gap: 1rem; }
+
+.user-avatar {
+    width: 45px;
+    height: 45px;
+    background: #3498db;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.user-info-text { display: flex; flex-direction: column; }
+.user-name { font-weight: 600; font-size: 1rem; }
+.user-role { font-size: 0.8rem; color: #7f8c8d; }
+
+.dashboard-content { padding: 2rem; max-width: 1200px; margin: 0 auto; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    transition: transform 0.2s;
+}
+
+.stat-card:hover { transform: translateY(-5px); }
+.stat-value { font-size: 2.5rem; font-weight: 800; color: #3498db; margin: 0.5rem 0; }
+.stat-card.highlight .stat-value { color: #2ecc71; }
+.stat-card.warning .stat-value { color: #f1c40f; }
+
+.recent-activity { margin-top: 3rem; background: white; padding: 2rem; border-radius: 12px; }
+.activity-item { padding: 1rem 0; border-bottom: 1px solid #eee; color: #555; }
+
+.logout-button-small {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
