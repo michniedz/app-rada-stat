@@ -14,10 +14,14 @@ const LoginForm = () => {
         setError('');
         setUserData(null);
 
+        const WORKER_URL = 'https://app-rada-stat.michniedz.workers.dev';
+
         try {
-            const response = await fetch('http://localhost:5000/api/login', {
+            const response = await fetch(`${WORKER_URL}/api/login`, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: {
+                    'Content-Type': 'application/json'
+                },
                 body: JSON.stringify({ login, password }),
             });
 
